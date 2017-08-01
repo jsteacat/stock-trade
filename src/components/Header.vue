@@ -2,13 +2,13 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <router-link class="navbar-brand" to="/">Stock Trader</router-link>
+          <router-link class="navbar-brand" :to="{name: 'home'}">Stock Trader</router-link>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <router-link to="/portfolio" activeClass="active" tag="li"><a>Portfolio</a></router-link>
-            <router-link to="/stocks" activeClass="active" tag="li"><a>Stocks</a></router-link>
+            <router-link :to="{name: 'portfolio'}" activeClass="active" tag="li"><a>Portfolio</a></router-link>
+            <router-link :to="{name: 'stocks'}" activeClass="active" tag="li"><a>Stocks</a></router-link>
           </ul>
           <strong class="navbar-text navbar-right">Funds: {{ funds | currency }}</strong>
           <ul class="nav navbar-nav navbar-right">
